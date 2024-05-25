@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hubilo - Edit user</title>
+    <link rel="shortcut icon" href="/images/favicon.png" type="image/x-icon">
+    <link rel="stylesheet" href="/stylesheets/style.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body>
+    <div class="w-full h-full bg-zinc-900 p-10 text-white">
+        <div class="nav flex gap-6 text-blue-500 text-lg">
+            <a href="/">Back to home</a>
+        </div>
+        <hr class="mt-1 mb-12 opacity-30">
+
+        <h1 class="text-3xl tracking-tight">Edit user</h1>
+        <hr class="mt-1 mb-6 opacity-30">
+
+        <form action="/update/<%= user._id %>" method="post" class="flex gap-2">
+            <input type="text" id="username" name="username" placeholder="Username here" class="px-5 py-3 border-2 border-zinc-700 rounded-lg outline-none bg-transparent" value="<%= user.username %>">
+            <input type="text" id="name" name="name" placeholder="Name here" class="px-5 py-3 border-2 border-zinc-700 rounded-lg outline-none bg-transparent" value="<%= user.name %>">
+            <input type="text" id="email" name="email" placeholder="Email address here" class="px-5 py-3 border-2 border-zinc-700 rounded-lg outline-none bg-transparent" value="<%= user.email %>">
+            <input type="text" id="phone" name="phone" placeholder="Phone number here" class="px-5 py-3 border-2 border-zinc-700 rounded-lg outline-none bg-transparent" value="<%= user.phone %>">
+            <input type="text" id="imageURL" name="imageURL" placeholder="Image URL here" class="px-5 py-3 border-2 border-zinc-700 rounded-lg outline-none bg-transparent" value="<%= user.imageURL %>">
+            <input type="submit" value="Update user" class="px-5 py-3 rounded-lg bg-blue-600 ml-3 cursor-pointer">
+        </form>
+    </div>
+
+    <script src="/javascripts/script.js"></script>
+</body>
+</html>
